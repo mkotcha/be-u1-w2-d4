@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="first commit">
+    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="Es1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shop/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shop/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emmek/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +72,20 @@
       <option name="project" value="LOCAL" />
       <updated>1697111373413</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Es1">
+      <option name="closed" value="true" />
+      <created>1697111887907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697111887907</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Es1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Es1" />
   </component>
 </project>

@@ -21,6 +21,7 @@ public class Order {
         this.customer = customer;
     }
 
+
     public Long getId() {
         return id;
     }
@@ -31,9 +32,13 @@ public class Order {
 
                 ", orderDate=" + orderDate +
                 ", customer=" + customer +
-                
+
 
                 '}';
+    }
+
+    public double getTotal() {
+        return products.stream().mapToDouble(Product::getPrice).sum();
     }
 
     public String getStatus() {

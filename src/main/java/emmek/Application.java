@@ -6,9 +6,12 @@ import Shop.Product;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
 
 public class Application {
 
@@ -31,7 +34,7 @@ public class Application {
         Customer customer3 = new Customer("giacomo", 2);
         List<Product> cart1 = Arrays.asList(book1, baby2, book3, baby4);
         List<Product> cart2 = Arrays.asList(baby1, book2, baby3, book4);
-        List<Product> cart3 = Arrays.asList(baby1, book2, book3, book4);
+        List<Product> cart3 = Arrays.asList(baby1, book2, book4);
         List<Product> cart4 = Arrays.asList(baby2, baby4, book4);
         Order order1 = new Order("new", LocalDate.of(2020, 1, 1), cart1, customer1);
         Order order2 = new Order("new", LocalDate.of(2020, 1, 1), cart2, customer2);
@@ -40,8 +43,13 @@ public class Application {
         List<Order> orders = Arrays.asList(order1, order2, order3, order4);
 
 
-        Map<Customer, List<Order>> orderCustomerMap = orders.stream().collect(Collectors.groupingBy(Order::getCustomer));
+        Map<Customer, List<Order>> orderCustomerMap = orders.stream().collect(groupingBy(Order::getCustomer));
         orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
+
+
+        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
+        customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total.getSum()));
+
 
     }
 }
