@@ -3,7 +3,11 @@ package emmek;
 import Shop.Customer;
 import Shop.Order;
 import Shop.Product;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -54,11 +58,17 @@ public class Application {
         Map<String, Double> categoryTotal = products.stream().collect(groupingBy(Product::getCategory, summingDouble(Product::getPrice)));
         categoryTotal.forEach((category, total) -> System.out.println(category + " - " + total));
 
-
+        saveProducts(products);
     }
 
-    public void saveProducts(List<Product> products) {
-        
+    public static void saveProducts(List<Product> products) {
+        File file = new File("src/products.txt");
+        String fileTxt = products.stream().map(Product::toString).collect(Collectors.joining());
+        try {
+            FileUtils.writeStringToFile(file, fileTxt + System.lineSeparator(), StandardCharsets.UTF_8, false);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
 }

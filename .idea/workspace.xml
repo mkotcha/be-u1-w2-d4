@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="Es4">
+    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="new Product toString">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emmek/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +111,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697116589406</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Es4">
+      <option name="closed" value="true" />
+      <created>1697117028493</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697117028493</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Es5">
+      <option name="closed" value="true" />
+      <created>1697117041803</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697117041803</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new Product toString">
+      <option name="closed" value="true" />
+      <created>1697117386591</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697117386592</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,6 +146,8 @@
     <MESSAGE value="Es3" />
     <MESSAGE value="odio git" />
     <MESSAGE value="Es4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Es4" />
+    <MESSAGE value="Es5" />
+    <MESSAGE value="new Product toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="new Product toString" />
   </component>
 </project>
