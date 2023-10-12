@@ -58,6 +58,7 @@ public class Application {
         Map<String, Double> categoryTotal = products.stream().collect(groupingBy(Product::getCategory, summingDouble(Product::getPrice)));
         categoryTotal.forEach((category, total) -> System.out.println(category + " - " + total));
 
+        
         saveProducts(products);
     }
 
