@@ -56,4 +56,9 @@ public class Application {
 
 
     }
+
+    public void saveProducts(List<Product> products) {
+        
+    }
+
 }
