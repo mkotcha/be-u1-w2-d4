@@ -43,10 +43,16 @@ public class Application {
         orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
 
 //        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
-        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(order -> order.getProducts().stream().mapToDouble(Product::getPrice).sum())));
-        customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total.getSum()));
+        Map<Customer, Double> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summingDouble(order -> order.getProducts().stream().mapToDouble(Product::getPrice).sum())));
+        customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total));
 
         List<Product> moreExpensive = products.stream().sorted(Comparator.comparingDouble(Product::getPrice).reversed()).limit(5).toList();
         moreExpensive.forEach(product -> System.out.println(product.getName() + " - " + product.getPrice()));
+
+        DoubleSummaryStatistics mediaOrdini = orders.stream().collect(Collectors.summarizingDouble(Order::getTotal));
+        System.out.println(mediaOrdini);
+        System.out.println(mediaOrdini.getAverage());
+
+
     }
 }
