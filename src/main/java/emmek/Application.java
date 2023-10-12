@@ -47,7 +47,8 @@ public class Application {
         orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
 
 
-        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
+//        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
+        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(order -> order.getProducts().stream().mapToDouble(Product::getPrice).sum())));
         customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total.getSum()));
 
 
