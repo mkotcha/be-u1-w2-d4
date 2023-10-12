@@ -58,8 +58,9 @@ public class Application {
         Map<String, Double> categoryTotal = products.stream().collect(groupingBy(Product::getCategory, summingDouble(Product::getPrice)));
         categoryTotal.forEach((category, total) -> System.out.println(category + " - " + total));
 
-        
-        saveProducts(products);
+
+//        saveProducts(products);
+        System.out.println(loadProducts());
     }
 
     public static void saveProducts(List<Product> products) {
@@ -71,5 +72,23 @@ public class Application {
             System.err.println(e.getMessage());
         }
     }
+
+    public static List<Product> loadProducts() {
+        File file = new File("src/products.txt");
+        String content = "";
+        List<Product> products = new ArrayList<>();
+        try {
+            content = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+
+        Arrays.stream(content.split("#")).forEach(product -> {
+            String[] arrStr = product.split("@");
+            if (arrStr.length > 1) products.add(new Product(arrStr[0], arrStr[1], Double.parseDouble(arrStr[2])));
+        });
+        return products;
+    }
+
 
 }

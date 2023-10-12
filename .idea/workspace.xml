@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="new Product toString">
+    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="Es6 test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/emmek/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
     </list>
@@ -18,6 +18,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mkotcha"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0fbb33bd-9722-4bb3-b117-fb532a856bca" />
+        <option name="url" value="https://github.com/mkotcha/be-u1-w2-d4.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -135,10 +149,54 @@
       <option name="project" value="LOCAL" />
       <updated>1697117386592</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Es5">
+      <option name="closed" value="true" />
+      <created>1697118372119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697118372119</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Es6">
+      <option name="closed" value="true" />
+      <created>1697118500323</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697118500323</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Es6">
+      <option name="closed" value="true" />
+      <created>1697118522731</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697118522731</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Es6 test">
+      <option name="closed" value="true" />
+      <created>1697118538587</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697118538587</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="first commit" />
     <MESSAGE value="Es1" />
     <MESSAGE value="Es2" />
@@ -146,8 +204,10 @@
     <MESSAGE value="Es3" />
     <MESSAGE value="odio git" />
     <MESSAGE value="Es4" />
-    <MESSAGE value="Es5" />
     <MESSAGE value="new Product toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="new Product toString" />
+    <MESSAGE value="Es5" />
+    <MESSAGE value="Es6" />
+    <MESSAGE value="Es6 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Es6 test" />
   </component>
 </project>
