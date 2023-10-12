@@ -9,12 +9,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.summingDouble;
 
 public class Application {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-
         Product book1 = new Product("libro1", "Books", 130);
         Product book2 = new Product("libro2", "Books", 10);
         Product book3 = new Product("libro3", "eBooks", 10);
@@ -23,7 +22,6 @@ public class Application {
         Product baby2 = new Product("baby2", "Baby", 10);
         Product baby3 = new Product("baby3", "Babys", 10);
         Product baby4 = new Product("baby4", "Baby", 140);
-
         List<Product> products = Arrays.asList(book1, book2, book3, book4, baby1, baby2, baby3, baby4);
         Customer customer1 = new Customer("aldo", 2);
         Customer customer2 = new Customer("giovanni", 1);
@@ -53,6 +51,8 @@ public class Application {
         System.out.println(mediaOrdini);
         System.out.println(mediaOrdini.getAverage());
 
+        Map<String, Double> categoryTotal = products.stream().collect(groupingBy(Product::getCategory, summingDouble(Product::getPrice)));
+        categoryTotal.forEach((category, total) -> System.out.println(category + " - " + total));
 
     }
 }

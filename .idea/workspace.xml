@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="odio git">
+    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="Es4">
       <change beforePath="$PROJECT_DIR$/src/main/java/emmek/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697116109010</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Es4">
+      <option name="closed" value="true" />
+      <created>1697116589406</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697116589406</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -112,6 +120,7 @@
     <MESSAGE value="Es2 long version" />
     <MESSAGE value="Es3" />
     <MESSAGE value="odio git" />
-    <option name="LAST_COMMIT_MESSAGE" value="odio git" />
+    <MESSAGE value="Es4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Es4" />
   </component>
 </project>
