@@ -24,7 +24,6 @@ public class Application {
         Product baby3 = new Product("baby3", "Babys", 10);
         Product baby4 = new Product("baby4", "Baby", 140);
 
-
         List<Product> products = Arrays.asList(book1, book2, book3, book4, baby1, baby2, baby3, baby4);
         Customer customer1 = new Customer("aldo", 2);
         Customer customer2 = new Customer("giovanni", 1);
@@ -42,7 +41,7 @@ public class Application {
 
         Map<Customer, List<Order>> orderCustomerMap = orders.stream().collect(groupingBy(Order::getCustomer));
         orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
-        
+
 //        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
         Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(order -> order.getProducts().stream().mapToDouble(Product::getPrice).sum())));
         customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total.getSum()));
