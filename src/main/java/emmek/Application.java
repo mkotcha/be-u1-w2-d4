@@ -5,10 +5,7 @@ import Shop.Order;
 import Shop.Product;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.DoubleSummaryStatistics;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -18,17 +15,17 @@ public class Application {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        Product book1 = new Product("libro1", "Books", 120);
+        Product book1 = new Product("libro1", "Books", 130);
         Product book2 = new Product("libro2", "Books", 10);
         Product book3 = new Product("libro3", "eBooks", 10);
         Product book4 = new Product("libro4", "Books", 120);
         Product baby1 = new Product("baby1", "Baby", 120);
         Product baby2 = new Product("baby2", "Baby", 10);
         Product baby3 = new Product("baby3", "Babys", 10);
-        Product baby4 = new Product("baby4", "Baby", 120);
+        Product baby4 = new Product("baby4", "Baby", 140);
 
 
-        List<Product> products = Arrays.asList(book1, book2, book3, book4);
+        List<Product> products = Arrays.asList(book1, book2, book3, book4, baby1, baby2, baby3, baby4);
         Customer customer1 = new Customer("aldo", 2);
         Customer customer2 = new Customer("giovanni", 1);
         Customer customer3 = new Customer("giacomo", 2);
@@ -45,12 +42,12 @@ public class Application {
 
         Map<Customer, List<Order>> orderCustomerMap = orders.stream().collect(groupingBy(Order::getCustomer));
         orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
-
-
+        
 //        Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(Order::getTotal)));
         Map<Customer, DoubleSummaryStatistics> customerTotalSales = orders.stream().collect(groupingBy(Order::getCustomer, Collectors.summarizingDouble(order -> order.getProducts().stream().mapToDouble(Product::getPrice).sum())));
         customerTotalSales.forEach((customer, total) -> System.out.println(customer + " - " + total.getSum()));
 
-
+        List<Product> moreExpensive = products.stream().sorted(Comparator.comparingDouble(Product::getPrice).reversed()).limit(5).toList();
+        moreExpensive.forEach(product -> System.out.println(product.getName() + " - " + product.getPrice()));
     }
 }
