@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Application {
 
@@ -31,13 +32,16 @@ public class Application {
         List<Product> cart1 = Arrays.asList(book1, baby2, book3, baby4);
         List<Product> cart2 = Arrays.asList(baby1, book2, baby3, book4);
         List<Product> cart3 = Arrays.asList(baby1, book2, book3, book4);
+        List<Product> cart4 = Arrays.asList(baby2, baby4, book4);
         Order order1 = new Order("new", LocalDate.of(2020, 1, 1), cart1, customer1);
         Order order2 = new Order("new", LocalDate.of(2020, 1, 1), cart2, customer2);
         Order order3 = new Order("new", LocalDate.of(2022, 1, 1), cart3, customer3);
-        List<Order> orders = Arrays.asList(order1, order2, order3);
+        Order order4 = new Order("new", LocalDate.now(), cart4, customer1);
+        List<Order> orders = Arrays.asList(order1, order2, order3, order4);
 
 
-        Map<Customer,List<Order>> orderCustomerMap =
+        Map<Customer, List<Order>> orderCustomerMap = orders.stream().collect(Collectors.groupingBy(Order::getCustomer));
+        orderCustomerMap.forEach((customer, ordersList) -> System.out.println(customer + " - " + ordersList));
 
     }
 }

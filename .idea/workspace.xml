@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shop/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shop/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Shop/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/emmek/ApplicationTest.java" afterDir="false" />
+    <list default="true" id="135795f6-f648-4333-9a0e-bc1612f04e1f" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/src/main/java/emmek/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/emmek/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +45,14 @@
     "zielu.gittoolbox.prj.config.selected.tab.id": "zielu.gittoolbox.config.prj.blame"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,6 +62,19 @@
       <option name="presentableId" value="Default" />
       <updated>1697100285507</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1697111373413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697111373413</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
